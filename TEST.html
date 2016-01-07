@@ -15,6 +15,9 @@
 
 <h1>This is my map</h1>
 
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v0.0.0/mapbox-gl-geocoder.js'></script>
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v0.0.0/mapbox-gl-geocoder.css' type='text/css' />
+
 <div id='map'></div>
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoibWFuYXNrdW1hcjc3MDciLCJhIjoiY2lqMmZ3cDM1MDAwc3V4a25seWt6eHIwdyJ9.V3935z_oMa_MkOucfYbC7w';
@@ -24,6 +27,8 @@ var map = new mapboxgl.Map({
     // center: [-77.38, 39], // starting position
     // zoom: 3 // starting zoom
 });
+
+map.addControl(new mapboxgl.Geocoder());
 </script>
 
 </body>
